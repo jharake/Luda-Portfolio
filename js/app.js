@@ -78,7 +78,7 @@ export default class Sketch{
     }
     
     setupFBO(){
-        this.size = 1000;
+        this.size = 400;
         this.fbo = this.getRenderTarget();
         this.fb1 = this.getRenderTarget();
     
