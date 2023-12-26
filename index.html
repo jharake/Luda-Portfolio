@@ -2,167 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morse</title>
-    <!--add bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!--add jquery-->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap');
-    </style>
-    <style>
+        *{margin:0;padding:0;}
         body{
-            background-color: #192931;
-            color: #4CAFAC;
+            background-color: white;
         }
-        #container{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            /* background-color: #101f26; */
-
-        }
-        .row{
-            /* background-color: blue; */
-            margin-left: 10%;
-            margin-right: 10%;
-            display: flex;
-            flex-wrap: nowrap;
-            margin-bottom: 4%;
-        }
-        h1{
-            font-weight: 100;
-            font-size: 2.5em;
-            text-align: center;
-            margin-top: 20%;
-        }
+        canvas{display: block}
+        #container{width: 100vw; height: 100vh}
     </style>
 </head>
 <body>
-    <h1>Yala tla3 mafi shi hon</h1>
-    <div id="container"></div>
+    <div id="container">
+        <div id="loading-screen" style="display: none; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #000;">
+            <div id="loading-progress" style="position: absolute; top: 50%; left: 10%; width: 0; height: 20px; background: #fff;"></div>
+        </div>
+    </div>
+    
+    <script type="module" src="./js/app.js"></script>
 </body>
-<script>
-    $(document).ready(function(){
-
-        var morse = {
-            "a": ".-",
-            "b": "-...",
-            "c": "-.-.",
-            "d": "-..",
-            "e": ".",
-            "f": "..-.",
-            "g": "--.",
-            "h": "....",
-            "i": "..",
-            "j": ".---",
-            "k": "-.-",
-            "l": ".-..",
-            "m": "--",
-            "n": "-.",
-            "o": "---",
-            "p": ".--.",
-            "q": "--.-",
-            "r": ".-.",
-            "s": "...",
-            "t": "-",
-            "u": "..-",
-            "v": "...-",
-            "w": ".--",
-            "x": "-..-",
-            "y": "-.--",
-            "z": "--..",
-            " ": " ",
-            "1": ".----",
-            "2": "..---",
-            "3": "...--",
-            "4": "....-",
-            "5": ".....",
-            "6": "-....",
-            "7": "--...",
-            "8": "---..",
-            "9": "----.",
-            "0": "-----",
-            ".": ".-.-.-",
-            ",": "--..--",
-            "?": "..--..",
-            "'": ".----.",
-            "/": "-..-.",
-            "(": "-.--.",
-            ")": "-.--.-",
-            "&": ".-...",
-            ":": "---...",
-            ";": "-.-.-.",
-            "=": "-...-",
-            "+": ".-.-.",
-            "-": "-....-",
-            "_": "..--.-",
-            "\"": ".-..-.",
-            "$": "...-..-",
-            "!": "-.-.--",
-            "@": ".--.-."
-        };
-
-        let name = "Mangal";
-        let morsed = "";
-
-        for (let i = 0; i < name.length; i++) {
-            if(name[i] == " "){
-                morsed += "/ ";
-                continue;
-            }
-            else if (i == name.length-1) {
-                morsed += morse[name[i].toLowerCase()];
-            }
-            else{
-                morsed += morse[name[i].toLowerCase()]+" ";
-            }
-        }
-        console.log(morsed);
-
-        var morseCode = morsed.split(" ");
-
-        var colors = ["#4CAFAC","#F3B643","#E25A54","#C08CBD"];
-
-        function getRandomColor() {
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
-
-        morseCode.forEach(function(item, index){
-            if(item == "/"){
-                // Create a new div
-                $('#container').append('<br>');
-            }
-            // Create a new div
-            var newDiv = $('<div></div>');
-            newDiv.addClass('row');
-
-            // Apply flexbox CSS to the div
-            newDiv.css({
-                display: 'flex',
-                gap: '10px' // Change the gap between flex items
-            });
-
-            let size = 18; // Define your size variable
-
-            for(let i in item){
-                let color = getRandomColor(); // Get a random color
-
-                if(item[i] == "."){
-                    newDiv.append(`<div style="width: ${size*1.3}px; height: ${size}px; background-color: ${color}; border-radius: ${size}px;"></div>`);
-                }
-                else if(item[i] == "-"){
-                    newDiv.append(`<div style="width: ${size * 8}px; height: ${size}px; background-color: ${color}; border-radius: ${size/2}px;"></div>`);
-                }
-                else{
-                    continue;
-                }
-            }
-
-            // Append the div to the container
-            $('#container').append(newDiv);
-        });
-    });
-</script>
 </html>
