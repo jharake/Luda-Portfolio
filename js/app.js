@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import GUI from 'lil-gui';
 import gsap from "gsap";
+import modelUrl from '../assets/house.glb';
 
 // import vertex from "./shader/vertex.glsl";
 // import fragment from "./shader/fragment.glsl";
@@ -88,7 +89,7 @@ export default class Sketch{
         // Create a loader that uses the loading manager
         this.loader = new GLTFLoader(this.manager);    
 
-        this.loader.load('./assets/house.glb', (gltf) => {
+        this.loader.load(modelUrl, (gltf) => {
             // gltf.scene.scale.set(5, 5, 5);
             gltf.scene.rotateY(Math.PI / 2);
 
