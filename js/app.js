@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import GUI from 'lil-gui';
 import gsap from "gsap";
 import modelUrl from '../assets/house.glb';
+// import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 // import vertex from "./shader/vertex.glsl";
 // import fragment from "./shader/fragment.glsl";
@@ -63,31 +64,7 @@ export default class Sketch{
        
     }
     addObjects() {
-        
-        this.manager = new THREE.LoadingManager();
-
-        this.manager.onStart = function () {
-            // Show the loading screen when the loading starts
-            document.getElementById('loading-screen').style.display = 'block';
-        };
-    
-        this.manager.onLoad = function () {
-            // Hide the loading screen when all items are loaded
-            document.getElementById('loading-screen').style.display = 'none';
-        };
-    
-        this.manager.onProgress = function (url, itemsLoaded, itemsTotal) {
-            // Update the progress bar
-            const progress = itemsLoaded / itemsTotal * 100;
-            document.getElementById('loading-progress').style.width = progress + '%';
-        };
-    
-        this.manager.onError = function (url) {
-            console.error('There was an error loading ' + url);
-        };
-    
-        // Create a loader that uses the loading manager
-        this.loader = new GLTFLoader(this.manager);    
+        this.loader = new GLTFLoader();
 
         this.loader.load(modelUrl, (gltf) => {
             // gltf.scene.scale.set(5, 5, 5);
@@ -101,11 +78,15 @@ export default class Sketch{
             gltf.scene.position.y += (gltf.scene.position.y - center.y);
             gltf.scene.position.z += (gltf.scene.position.z - center.z);
 
-            
-
             this.scene.add(gltf.scene);
 
-        }, undefined, function (error) {
+        }, 
+        function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	    },
+        function (error) {
             console.error(error);
         });
     }
