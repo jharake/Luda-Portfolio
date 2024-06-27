@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+@font-face {
+  font-family: 'Arsenic';
+  src: url('./fonts/ArsenicaTrial-Regular.ttf');
+}
+
+#root {
+  margin: 0 auto ;
+  max-width: 1800px;
+  width: 90%;
+}
+
+
+.container {
+  text-align: center;
+  padding: 60px;
+  margin: auto;
+  width: 90%;
+}
+h1.title{
+  font-family: 'Arsenic', sans-serif;
+  font-size: 9em;
+  margin: auto;
+  margin-top: 20%;
+  text-align: center;
+  width: fit-content;
+  border: 1px solid black;
+  border-style: none none solid none;
+
+}
+
+.container h1{
+  font-family: 'Arsenic', sans-serif;
+  font-size: 9em;
+  margin: 0;
+  margin-bottom: -5.2%;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  border: 1px solid black;
+  border-style: solid none none none;
+}
+.icon-container {
+  color: b;
+  position: relative;
+  display: inline-block;
+}
+
+.icon {
+  color: red;
+  rotate: -10deg;
+  transform: scale(0.35);
+  width: 1em; /* Adjust size as necessary */
+  height: 1em;
+  position: absolute;
+  top: -0.01em; /* Adjust position to align with the dot */
+  left: -0.42em;
+  pointer-events: none; /* Ensure the icon doesn't interfere with text selection */
+}
+#imgCont{
+  margin: 0;
+  height: fit-content;
+  position: relative;
+  z-index: -1;
+}
+#imgCont > img {
+  position: relative;
+  z-index: -1;
+  width: 26%;
+  height: auto;
+  rotate: -10deg;
+  margin: 0;
+}
+.container h2{
+  font-family: 'Arsenic', sans-serif;
+  font-size: 6em;
+  margin: auto;
+  background-color: transparent;
+  position: relative;
+  width: fit-content;
+  margin-top: -5%;
+  margin-bottom: -2%;
+  text-align: justify;
+}
+.container h3{
+  font-family: 'Arimo' , sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5em;
+  margin: auto;
+  width: 20%;
+  padding-bottom: 10px;
+  padding-left: 0.5em;
+  font-size: 1em;
+  text-align: center;
+}
+.container h3:not(h3.fade-in){
+  margin-bottom: -0.3%;
+}
+
+h3.fade-in{
+  margin-bottom: 18px;
+  border: 1px solid black;
+  border-style: none none solid none;
+}
+
+h2 {
+  font-family: "Arimo", sans-serif;
+  font-size: 6em;
+  font-weight: 200;
+  margin: 0;
+  margin-top: 10%;
+  margin-bottom: -1%;
+  text-align: center;
+}
+
+button.scroll {
+  font-family: "Arimo", sans-serif;
+  width: 200px;
+  color: rgb(178, 178, 178);
+  font-size: 0.8em;
+  letter-spacing: 1em;
+  font-weight: 100;
+  padding: 10px 20px;
+  padding-left: 3em ;
+  margin: 10px;
+  border: 1px solid rgb(178, 178, 178);
+  background-color: transparent;
+  cursor: pointer;
+}
+button.seeMore{
+  font-family: "Arimo", sans-serif;
+  padding: 5px 20px;
+  color: rgb(167, 167, 167);
+  font-size: 1em;
+  letter-spacing: 0.3em;
+  font-weight: 100;
+  margin: auto;
+  border: 1px solid rgb(178, 178, 178);
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: -700px;
+}
+
+button.seeMore:hover{
+  background-color: rgb(178, 178, 178);
+  color: white;
+}
+
+#aboutMe{
+  margin: 5%;
+  width: 40%;
+}
+p {
+  font-family: "Arimo", sans-serif;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  
+}
+.righter{
+  float: right;
+  width: 50%;
+  margin: 0;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+img.bw {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+#fontA{
+  font-family: "Arimo", sans-serif;
+  font-weight: 100;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.fade-in:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.fade-in:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.fade-in:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.fade-in:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
