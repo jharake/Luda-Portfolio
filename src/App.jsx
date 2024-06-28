@@ -114,7 +114,7 @@ function App() {
             <img
               style={{
                 float: "right",
-                width: "56%",
+                width: "50%",
                 margin: "0",
                 marginRight: "0%",
                 marginTop: "5%",
@@ -262,6 +262,47 @@ function App() {
                 translate: "30px -130px"
               }}
               src="./imgs/dance1.png"
+              alt="dance1"
+            />
+          </Animator>
+        </ScrollPage>
+
+        <ScrollPage>
+          <Animator animation={batch(Fade())}>
+            <img
+              className="fade-in"
+              style={{
+                position: "relative",
+                zIndex: "-1",
+                float: "right",
+                width: "30%",
+                margin: "0",
+                marginRight: "6%",
+                marginTop: "0%",
+              }}
+              src="./imgs/FAS1.png"
+              alt="dance2"
+            />
+          </Animator>
+          <Animator style={{position:"relative",zIndex:"1"}} animation={batch(MoveIn(1000, 0))}>
+            <div style={{zIndex:"1",position:"relative",marginTop:"-3%",marginLeft:"0%",paddingLeft: "10px",paddingBottom:'13px',width:"fit-content" }}>
+              <p style={{float:"left",paddingLeft:"10px",marginBottom:"-50%",letterSpacing:"1em"}}>2022<span style={{letterSpacing:"0.05em",fontSize:"0.65em",marginLeft:"210px"}}>nater your input</span></p>
+              <h2 style={{textAlign:"left"}}>FINE ARTS SCHOOL</h2>
+              <div style={{textAlign:"center",marginTop:"-2%"}}>
+                <button className="seeMore">See More</button>
+              </div>
+            </div>
+          </Animator>
+          <Animator animation={batch(Fade())}>
+            <img
+            className="fade-in"
+              style={{
+                position: "absolute",
+                zIndex: "-1",
+                width: "60%",
+                translate: "30px 0px"
+              }}
+              src="./imgs/FAS2.png"
               alt="dance1"
             />
           </Animator>
