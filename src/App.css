@@ -14,13 +14,13 @@
 
 .container {
   text-align: center;
-  padding: 30px;
+  padding: 60px;
   margin: auto;
-  width: 90%;
+  width: 80%;
 }
 h1.title{
   font-family: 'Arsenic', sans-serif;
-  font-size: 9em;
+  font-size: 8em;
   margin: auto;
   margin-top: 10%;
   text-align: center;
@@ -32,7 +32,7 @@ h1.title{
 
 .container h1{
   font-family: 'Arsenic', sans-serif;
-  font-size: 9em;
+  font-size: 8.2em;
   margin: 0;
   margin-bottom: -5.2%;
   background-color: transparent;
@@ -42,7 +42,6 @@ h1.title{
   border-style: solid none none none;
 }
 .icon-container {
-  color: b;
   position: relative;
   display: inline-block;
 }
@@ -67,14 +66,14 @@ h1.title{
 #imgCont > img {
   position: relative;
   z-index: -1;
-  width: 26%;
+  width: 23%;
   height: auto;
   rotate: -10deg;
   margin: 0;
 }
 .container h2{
   font-family: 'Arsenic', sans-serif;
-  font-size: 6em;
+  font-size: 5.4em;
   margin: auto;
   background-color: transparent;
   position: relative;
@@ -99,14 +98,15 @@ h1.title{
 }
 
 h3.fade-in{
-  margin-bottom: 18px;
+  padding-bottom: 2%;
+  margin-bottom: 10px;
   border: 1px solid black;
   border-style: none none solid none;
 }
 
 h2 {
   font-family: "Arimo", sans-serif;
-  font-size: 6em;
+  font-size: 5.5em;
   font-weight: 200;
   margin: 0;
   margin-top: 10%;
@@ -114,9 +114,9 @@ h2 {
   text-align: center;
 }
 
-button.scroll {
+/* button.scroll {
   font-family: "Arimo", sans-serif;
-  width: 200px;
+  width: 100px;
   color: rgb(178, 178, 178);
   font-size: 0.8em;
   letter-spacing: 1em;
@@ -127,7 +127,8 @@ button.scroll {
   border: 1px solid rgb(178, 178, 178);
   background-color: transparent;
   cursor: pointer;
-}
+} */
+
 button.seeMore{
   font-family: "Arimo", sans-serif;
   padding: 5px 20px;
@@ -200,6 +201,49 @@ img.bw {
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+/* Media Queries for Mobile Compatibility */
+
+@media (max-width: 768px) {
+  .container{
+    padding: 10%;
+    margin-top: 50%;
+  }
+  h1.title,
+  .container h1 {
+    font-size: 2.2em;
+  }
+
+  .container h2 {
+    font-size: 2.05em;
+  }
+
+  .container h3 {
+    width: 50%;
+    font-size: 0.3em;
+  }
+
+  button.scroll,
+  button.seeMore {
+    width: 150px;
+    padding: 8px 16px;
+    font-size: 0.7em;
+  }
+
+  #aboutMe {
+    width: 90%;
+  }
+
+  .righter {
+    float: none;
+    width: 100%;
+    margin: 5% auto;
+  }
+
+  img{
+    transform: scale(1);
   }
 }
 
