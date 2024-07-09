@@ -163,7 +163,7 @@ const MainPage = () => {
         <ScrollPage>
           <div id="aboutmeContainer">
             <Animator animation={batch(Fade(), MoveIn(1000, 300))}>
-              <div
+              <div id="imgblockAboutme"
                 style={{ display: "flex", flexDirection: "column", gap: "5vh" }}
               >
                 <img
@@ -171,6 +171,7 @@ const MainPage = () => {
                   style={{
                     rotate: "2deg",
                     maxHeight: "36vh",
+
                   }}
                   src="./imgs/luda2.jpg"
                   alt="aboutMe"
@@ -179,7 +180,7 @@ const MainPage = () => {
                   className="bw"
                   style={{
                     rotate: "-7deg",
-                    alignSelf: "center",
+
                   }}
                   src="./imgs/luda3.jpg"
                   alt="aboutMe"

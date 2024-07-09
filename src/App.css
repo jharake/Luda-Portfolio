@@ -256,41 +256,45 @@ img.bw {
   .container h2 {
     font-size: 2.05em;
   }
-
   .container h3 {
     width: 50%;
     font-size: 0.3em;
   }
-
   button.scroll,
   button.seeMore {
     width: 150px;
     padding: 8px 16px;
     font-size: 0.7em;
   }
-
   #aboutMe {
-    width: 90%;
+    font-size: 2.5em;
   }
-
   .righter {
     float: none;
     width: 100%;
     margin: 5% auto;
   }
-
   .bw{
-    transform: scale(1);
+    transform: scale(0.5);
   }
   #aboutmeContainer{
     flex-direction: column;
   }
-  #textblockAboutme{
+  #imgblockAboutme{
     background-color: tomato;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0%;
+  }
+  #imgblockAboutme img{
+    width: 50%;
+  }
+  #textblockAboutme{
     width: 100%;
   }
-  h2{
-    font-size: 0.1em;
+  #textblockAboutme p{
+    font-size: 1em;
   }
 }
 
