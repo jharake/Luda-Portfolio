@@ -1,0 +1,36 @@
+#backButton{
+    position: absolute;
+    top: 4%;
+    padding: 2%;
+}
+
+#img-container{
+    height: 100vh;
+    align-content: center;
+    position: relative;
+
+}
+
+#carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+    height: 70vh;
+    text-align: center;
+}
+
+.carousel-image {
+    opacity: 0.8;
+    border: 2px solid black;
+    width: 50%;
+    transition: transform 0.3s, opacity 0.3s;
+
+}
+
+.carousel-image:hover {
+transform: scale(1.3);
+opacity: 1;
+}
+  

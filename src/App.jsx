@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -29,19 +29,25 @@ export const projects = [
     name2: "ARCHITECT’S RESIDENTIAL ONE FLOOR HOUSE",
     date: "2022",
     images: [
-      "./imgs/res1.png",
-      "./imgs/res2.png",
-      "./imgs/res3.png",
-
-    ],
+      "/imgs/res1.png",
+      "/imgs/res2.png",
+      "/imgs/res3.png",
+      "/imgs/res4.png",
+      "/imgs/res5.png",
+      "/imgs/res6.png",
+    ]
   },
   {
     name: "church",
     name2: "RELEVE OF MAR ELIAS CHURCH IN HADATH",
     date: "2022",
     images: [
-      "./imgs/church1.png",
-      "./imgs/church2.png",
+      "/imgs/church1.png",
+      "/imgs/church2.png",
+      "/imgs/church3.png",
+      "/imgs/church4.png",
+      "/imgs/church5.png",
+      "/imgs/church6.png",
 
     ],
   },
@@ -50,11 +56,10 @@ export const projects = [
     name2: "KIOSK IN SANAYA PARK IN BEIRUT",
     date: "2022",
     images: [
-      "./imgs/kiosk1.png",
-      "./imgs/kiosk2.png",
-      "./imgs/kiosk3.png",
-      "./imgs/kiosk4.png",
-
+      "/imgs/kiosk1.png",
+      "/imgs/kiosk2.png",
+      "/imgs/kiosk3.png",
+      "/imgs/kiosk4.png",
     ],
   },
   {
@@ -62,9 +67,10 @@ export const projects = [
     name2: "RESEDENTIAL HOUSE WITH A DANCE STUDIO BUSINESS",
     date: "2022",
     images: [
-      "./imgs/dance1.png",
-      "./imgs/dance2.png",
-      "./imgs/dance3.png",
+      "/imgs/dance1.png",
+      "/imgs/dance2.png",
+      "/imgs/dance3.png",
+      "/imgs/dance4.png",
 
     ],
   },
@@ -73,9 +79,9 @@ export const projects = [
     name2: "nater your input",
     date: "2022",
     images: [
-      "./imgs/FAS1.png",
-      "./imgs/FAS2.png",
-      "./imgs/FAS3.png",
+      "/imgs/FAS1.png",
+      "/imgs/FAS2.png",
+      "/imgs/FAS3.png",
 
     ],
   },
@@ -84,11 +90,10 @@ export const projects = [
     name2: "nater your input",
     date: "2022",
     images: [
-      "./imgs/Adap1.png",
-      "./imgs/Adap2.png",
-      "./imgs/Adap3.png",
-      "./imgs/Adap4.png",
-      "./imgs/Adap5.png",
+      "/imgs/Adap1.png",
+      "/imgs/Adap2.png",
+      "/imgs/Adap3.png",
+      "/imgs/Adap4.png",
 
     ],
   },
@@ -97,10 +102,11 @@ export const projects = [
     name2: "nater your input",
     date: "2022",
     images: [
-      "./imgs/museum1.png",
-      "./imgs/museum2.png",
-      "./imgs/museum3.png",
-      "./imgs/museum4.png",
+      "/imgs/museum1.png",
+      "/imgs/museum2.png",
+      "/imgs/museum3.png",
+      "/imgs/museum4.png",
+      "/imgs/museum5.png",
 
     ],
   },
@@ -109,10 +115,10 @@ export const projects = [
     name2: "nater your input",
     date: "2022",
     images: [
-      "./imgs/dorm1.png",
-      "./imgs/dorm2.png",
-      "./imgs/dorm3.png",
-      "./imgs/dorm4.png",
+      "/imgs/dorm1.png",
+      "/imgs/dorm2.png",
+      "/imgs/dorm3.png",
+      "/imgs/dorm4.png",
 
     ],
   },
@@ -124,9 +130,18 @@ const MainPage = () => {
   const handleSeeMoreClick = (projectName) => {
     const project = projects.find((proj) => proj.name === projectName);
     if (project) {
+      localStorage.setItem('scrollPosition', window.scrollY);
       navigate(`/project/${projectName}`);
     }
   };
+
+  useEffect(() => {
+    const savedPosition = localStorage.getItem('scrollPosition');
+    if (savedPosition) {
+      window.scrollTo(0, parseInt(savedPosition, 10));
+      localStorage.removeItem('scrollPosition');
+    }
+  }, []);
 
   return (
     <>
