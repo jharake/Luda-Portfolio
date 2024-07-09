@@ -171,7 +171,7 @@ const MainPage = () => {
                   style={{
                     rotate: "2deg",
                     maxHeight: "36vh",
-
+                    alignSelf: "center",
                   }}
                   src="./imgs/luda2.jpg"
                   alt="aboutMe"
@@ -180,7 +180,7 @@ const MainPage = () => {
                   className="bw"
                   style={{
                     rotate: "-7deg",
-
+                    alignSelf: "center",
                   }}
                   src="./imgs/luda3.jpg"
                   alt="aboutMe"
