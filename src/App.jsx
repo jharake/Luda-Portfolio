@@ -35,7 +35,7 @@ export const projects = [
       "/imgs/res4.png",
       "/imgs/res5.png",
       "/imgs/res6.png",
-    ]
+    ],
   },
   {
     name: "church",
@@ -48,7 +48,6 @@ export const projects = [
       "/imgs/church4.png",
       "/imgs/church5.png",
       "/imgs/church6.png",
-
     ],
   },
   {
@@ -71,19 +70,13 @@ export const projects = [
       "/imgs/dance2.png",
       "/imgs/dance3.png",
       "/imgs/dance4.png",
-
     ],
   },
   {
     name: "fine-arts-school",
     name2: "nater your input",
     date: "2022",
-    images: [
-      "/imgs/FAS1.png",
-      "/imgs/FAS2.png",
-      "/imgs/FAS3.png",
-
-    ],
+    images: ["/imgs/FAS1.png", "/imgs/FAS2.png", "/imgs/FAS3.png"],
   },
   {
     name: "AMIR FAKHERDINNE’S PALACE",
@@ -94,7 +87,6 @@ export const projects = [
       "/imgs/Adap2.png",
       "/imgs/Adap3.png",
       "/imgs/Adap4.png",
-
     ],
   },
   {
@@ -107,7 +99,6 @@ export const projects = [
       "/imgs/museum3.png",
       "/imgs/museum4.png",
       "/imgs/museum5.png",
-
     ],
   },
   {
@@ -119,7 +110,6 @@ export const projects = [
       "/imgs/dorm2.png",
       "/imgs/dorm3.png",
       "/imgs/dorm4.png",
-
     ],
   },
 ];
@@ -130,16 +120,16 @@ const MainPage = () => {
   const handleSeeMoreClick = (projectName) => {
     const project = projects.find((proj) => proj.name === projectName);
     if (project) {
-      localStorage.setItem('scrollPosition', window.scrollY);
+      localStorage.setItem("scrollPosition", window.scrollY);
       navigate(`/project/${projectName}`);
     }
   };
 
   useEffect(() => {
-    const savedPosition = localStorage.getItem('scrollPosition');
+    const savedPosition = localStorage.getItem("scrollPosition");
     if (savedPosition) {
       window.scrollTo(0, parseInt(savedPosition, 10));
-      localStorage.removeItem('scrollPosition');
+      localStorage.removeItem("scrollPosition");
     }
   }, []);
 
@@ -171,70 +161,63 @@ const MainPage = () => {
           </div>
         </ScrollPage>
         <ScrollPage>
-          <Animator animation={batch(Fade(), MoveIn(1000, 300))}>
-            <div
-              style={{ margin: "0px", float: "right", width: "fit-content" }}
-            >
-              <img
-                className="bw"
-                style={{
-                  rotate: "2deg",
-                  display: "block",
-                  margin: "auto",
-                  marginTop: "60px",
-                  width: "400px",
-                }}
-                src="./imgs/luda2.jpg"
-                alt="aboutMe"
-              />
-              <img
-                className="bw"
-                style={{
-                  rotate: "-7deg",
-                  display: "block",
-                  width: "250px",
-                  marginLeft: "30px",
-                  marginTop: "60px",
-                }}
-                src="./imgs/luda3.jpg"
-                alt="aboutMe"
-              />
+          <div id="aboutmeContainer">
+            <Animator animation={batch(Fade(), MoveIn(1000, 300))}>
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: "5vh" }}
+              >
+                <img
+                  className="bw"
+                  style={{
+                    rotate: "2deg",
+                    maxHeight: "36vh",
+                  }}
+                  src="./imgs/luda2.jpg"
+                  alt="aboutMe"
+                />
+                <img
+                  className="bw"
+                  style={{
+                    rotate: "-7deg",
+                    alignSelf: "center",
+                  }}
+                  src="./imgs/luda3.jpg"
+                  alt="aboutMe"
+                />
+              </div>
+            </Animator>
+            <div id="textblockAboutme">
+              <Animator animation={batch(MoveIn(-600, 200))}>
+                <h2 id="aboutMe">
+                  A LITTLE ABOUT{" "}
+                  <span style={{ fontFamily: "Arsenic", fontWeight: "900" }}>
+                    {" "}
+                    ME{" "}
+                  </span>
+                </h2>
+              </Animator>
+              <Animator animation={batch(MoveIn(0, 800))}>
+                <p>
+                  A multi-tasking adult passionate about life and my work, I am
+                  dedicated to everything I engage in, with excellent
+                  communication and organizational skills. I have a proactive
+                  attitude, able to work under any circumstances, and find
+                  positive ways to stimulate and engage with people. I began my
+                  journey in an interesting but ultimately unsuitable field for
+                  me, but I eventually discovered my true passion, and here I
+                  am.
+                </p>
+              </Animator>
             </div>
             <img
               className="bw"
               style={{
-                rotate: "7deg",
-                float: "right",
-                width: "300px",
-                marginTop: "80px",
-                marginRight: "80px",
+                rotate: "-7deg",
+                maxHeight: "60%",
               }}
               src="./imgs/luda1.png"
               alt="aboutMe"
             />
-          </Animator>
-          <div>
-            <Animator animation={batch(MoveIn(-600, 200))}>
-              <h2 id="aboutMe">A LITTLE ABOUT ME</h2>
-            </Animator>
-            <Animator animation={batch(MoveIn(0, 800))}>
-              <p
-                style={{
-                  width: "60%",
-                  fontWeight: "100",
-                  marginLeft: "6%",
-                  marginTop: "10%",
-                }}
-              >
-                Multi-tasked adult, passionate about life and what I do. I’m
-                Dedicated to everything I get engage with, with an excellent
-                communicational and organizational skills. I have a proactive
-                attitude which I can work under any circumstances and find
-                positive ways to stimulate and engage with people. I started my
-                journey in an interesting but wrong field for me but then I
-                found what I was passionate about and here I am.
-              </p>
-            </Animator>
           </div>
         </ScrollPage>
 
@@ -310,7 +293,7 @@ const MainPage = () => {
                 position: "relative",
                 zIndex: "-1",
                 float: "right",
-                width: "45%",
+                width: "40%",
                 margin: "0",
                 marginRight: "5%",
                 marginTop: "5%",

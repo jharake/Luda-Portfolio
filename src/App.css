@@ -5,13 +5,27 @@
   src: url('/src/fonts/ArsenicaTrial-Regular.ttf') format('truetype');
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: transparent;
+  /* border: 1px solid #cacaca; */
+
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #3636366b;
+}
+
 #root {
   margin: 0 auto ;
   max-width: 1800px;
   width: 94%;
 }
-
-
 .container {
   text-align: center;
   padding: 60px;
@@ -149,15 +163,37 @@ button.seeMore:hover{
 }
 
 #aboutMe{
-  margin: 5%;
-  width: 40%;
+  font-weight: 100;
+  font-size: 5.8em;
+}
+#textblockAboutme{
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+#aboutmeContainer{
+  padding: 0% 2%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+}
+#textblockAboutme p{
+  font-size: 1.16em;
+  margin-top: 5%;
 }
 p {
   font-family: "Arimo", sans-serif;
   font-size: 1.2em;
+  font-weight: 100;
   margin: 0;
   padding: 0;
-  text-align: justify;
+  text-align: center;
   
 }
 .righter{
@@ -170,6 +206,7 @@ p {
 img.bw {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+  max-height: 300px;
 }
 
 #fontA{
@@ -242,8 +279,18 @@ img.bw {
     margin: 5% auto;
   }
 
-  img{
+  .bw{
     transform: scale(1);
+  }
+  #aboutmeContainer{
+    flex-direction: column;
+  }
+  #textblockAboutme{
+    background-color: tomato;
+    width: 100%;
+  }
+  h2{
+    font-size: 0.1em;
   }
 }
 
