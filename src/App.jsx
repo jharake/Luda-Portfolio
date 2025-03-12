@@ -22,7 +22,7 @@ function App() {
         <ScrollPage>
           <div className="container">
             <Animator animation={batch(Fade(), MoveOut(0, -1000))}>
-              <h1 className="fade-in"> Ludmiii<span className="icon-container">i<img src={bfIcon} className="icon" alt="bf1" /></span>la Semaan</h1>
+              <h1 className="fade-in"> Ludm<span className="icon-container">i<img src={bfIcon} className="icon" alt="bf1" /></span>la Semaan</h1>
               <div className="fade-in" id="imgCont">
                 <img src="./imgs/luda0.png" alt="Ludmila Semaan" />
               </div>
