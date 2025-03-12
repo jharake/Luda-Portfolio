@@ -24,7 +24,7 @@ function App() {
             <Animator animation={batch(Fade(), MoveOut(0, -1000))}>
               <h1 className="fade-in"> Ludmiii<span className="icon-container">i<img src={bfIcon} className="icon" alt="bf1" /></span>la Semaan</h1>
               <div className="fade-in" id="imgCont">
-                <img src="./src/imgs/luda0.png" alt="Ludmila Semaan" />
+                <img src="./imgs/luda0.png" alt="Ludmila Semaan" />
               </div>
             </Animator>
             <Animator animation={batch(Fade(), MoveOut(0, 0))}>
@@ -50,7 +50,7 @@ function App() {
                   marginTop: "60px",
                   width: "400px",
                 }}
-                src="./src/imgs/luda2.jpg"
+                src="./imgs/luda2.jpg"
                 alt="aboutMe"
               />
               <img
@@ -62,7 +62,7 @@ function App() {
                   marginLeft: "30px",
                   marginTop: "60px",
                 }}
-                src="./src/imgs/luda3.jpg"
+                src="./imgs/luda3.jpg"
                 alt="aboutMe"
               />
             </div>
@@ -75,7 +75,7 @@ function App() {
                 marginTop: "80px",
                 marginRight: "80px",
               }}
-              src="./src/imgs/luda1.png"
+              src="./imgs/luda1.png"
               alt="aboutMe"
             />
           </Animator>
@@ -119,7 +119,7 @@ function App() {
                 marginRight: "0%",
                 marginTop: "5%",
               }}
-              src="./src/imgs/res2.png"
+              src="./imgs/res2.png"
               alt="res2"
             />
           </Animator>
@@ -138,7 +138,7 @@ function App() {
                 marginLeft: "-2%",
                 width: "50%",
               }}
-              src="./src/imgs/res1.png"
+              src="./imgs/res1.png"
               alt="res1"
             />
           </Animator>
@@ -157,7 +157,7 @@ function App() {
                 marginRight: "5%",
                 marginTop: "5%",
               }}
-              src="./src/imgs/church2.png"
+              src="./imgs/church2.png"
               alt="church2"
             />
           </Animator>
@@ -178,7 +178,7 @@ function App() {
                 marginTop: "-1%",
                 marginRight: "5%",
               }}
-              src="./src/imgs/church1.png"
+              src="./imgs/church1.png"
               alt="church1"
             />
           </Animator>
@@ -197,7 +197,7 @@ function App() {
                 marginRight: "0%",
                 marginTop: "0%",
               }}
-              src="./src/imgs/kiosk1.png"
+              src="./imgs/kiosk1.png"
               alt="kiosk1"
             />
           </Animator>
@@ -220,7 +220,7 @@ function App() {
                 marginTop: "-1%",
                 marginRight: "5%",
               }}
-              src="./src/imgs/kiosk2.png"
+              src="./imgs/kiosk2.png"
               alt="kiosk12"
             />
           </Animator>
@@ -239,7 +239,7 @@ function App() {
                 marginRight: "-3%",
                 marginTop: "0%",
               }}
-              src="./src/imgs/dance2.png"
+              src="./imgs/dance2.png"
               alt="dance2"
             />
           </Animator>
@@ -261,7 +261,7 @@ function App() {
                 width: "64%",
                 translate: "30px -130px"
               }}
-              src="./src/imgs/dance1.png"
+              src="./imgs/dance1.png"
               alt="dance1"
             />
           </Animator>
@@ -280,7 +280,7 @@ function App() {
                 marginRight: "6%",
                 marginTop: "0%",
               }}
-              src="./src/imgs/FAS1.png"
+              src="./imgs/FAS1.png"
               alt="dance2"
             />
           </Animator>
@@ -302,7 +302,7 @@ function App() {
                 width: "60%",
                 translate: "30px 0px"
               }}
-              src="./src/imgs/FAS2.png"
+              src="./imgs/FAS2.png"
               alt="dance1"
             />
           </Animator>
